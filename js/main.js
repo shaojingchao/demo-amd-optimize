@@ -1,0 +1,22 @@
+require.config({
+	baseUrl:'js',
+	paths:{
+		'jquery':"jquery",		
+		'Sslide':"SuperSlide",
+		'contact':"contact",
+		'backTop':"backTop",
+		'infor':"inforMation",
+		'banner':"scrool",
+		'webChat':"webChat",
+	},
+	shim:{
+		'Sslide':['jquery'],
+	},
+});
+require(['jquery','Sslide','contact','banner','backTop','infor','webChat'],function($,ss,ct,br,bt,ir,wt){
+	ct.contact();
+	bt.backTop();
+	ir.infor();
+	br.banner();
+	wt.webChat();
+})
